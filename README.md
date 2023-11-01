@@ -3,7 +3,7 @@
 This is a Java revision project by the BluePrint Bandits team. The project consists of four applications: a login page, a scientific calculator, a currency converter, and a calendar. The project is intended to help us practice our Java skills and prepare for the final exam.
 ##Requirements
 
-    Java 11 or higher
+    Java 21 or higher
     No external libraries required
 
 ## Usage

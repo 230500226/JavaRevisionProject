@@ -7,6 +7,8 @@ package javarevisionproject;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -21,10 +23,10 @@ public class LogInPage extends javax.swing.JFrame {
     /**
      * Creates new form LogInPage
      */
-    public LogInPage() {
-        initComponents();
-    }
-
+	public LogInPage() {
+		initComponents();
+	}
+	
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -85,7 +87,7 @@ public class LogInPage extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addComponent(jUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 23, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -93,6 +95,17 @@ public class LogInPage extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel3.setText("Password");
+
+        jPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordActionPerformed(evt);
+            }
+        });
+        jPassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPasswordKeyPressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -132,6 +145,11 @@ public class LogInPage extends javax.swing.JFrame {
         jLogInButt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jLogInButtActionPerformed(evt);
+            }
+        });
+        jLogInButt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jLogInButtKeyPressed(evt);
             }
         });
 
@@ -225,35 +243,53 @@ public class LogInPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jExitButtActionPerformed
+    	
+    private void verifyLogin() {
+        String Password = jPassword.getText();
+        System.out.println(jPassword.getText() + "\n" +jUsername.getText());
+        if(jUsername.getText().equals("") || jUsername.getText().equals(" ") || jPassword.getPassword().equals("") || jPassword.getPassword().equals(" ")) {
+            JOptionPane.showMessageDialog(null, "One of the fields are empty!","Notification",JOptionPane.ERROR_MESSAGE);
+        } else if(jUsername.getText().equals("admin") && Password.equals("admin123")) {
+            dispose();
+            LoadingPage loadingpage = new LoadingPage();
+            loadingpage.setVisible(true);
+            loadingpage.startLoading();
+        } else {
+            jWrongPass.setForeground(Color.red);
+            jWrongPass.setText("Wrong Information provided");
 
+            Timer timer = new Timer(1000, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent evt) {
+                    jWrongPass.setText("");
+                }
+            });
+
+            timer.setRepeats(false);
+            timer.start();
+        }
+    }
+    
     private void jLogInButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLogInButtActionPerformed
         // TODO add your handling code here:
-    String Password = jPassword.getText();
-            System.out.println(jPassword.getText() + "\n" +jUsername.getText());
-      if(jUsername.getText().equals("") || jUsername.getText().equals(" ") || jPassword.getPassword().equals("") || jPassword.getPassword().equals(" "))
-      {
-          JOptionPane.showMessageDialog(null, "One of the fields are empty!","Notification",JOptionPane.ERROR_MESSAGE);
-      }
-      else if(jUsername.getText().equals("admin") && Password.equals("admin123"))
-      {
-          System.out.println("Hi");
-          
-      }
-      else{
-         jWrongPass.setForeground(Color.red);
-    jWrongPass.setText("Wrong Information provided");
-
-    Timer timer = new Timer(1000, new ActionListener() {
-    @Override
-    public void actionPerformed(ActionEvent evt) {
-        jWrongPass.setText("");
-    }
-        });
-
-    timer.setRepeats(false);
-    timer.start();
-      }
+        verifyLogin(); 
     }//GEN-LAST:event_jLogInButtActionPerformed
+
+        private void jLogInButtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jLogInButtKeyPressed
+            if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+                verifyLogin();
+            }
+        }//GEN-LAST:event_jLogInButtKeyPressed
+
+    private void jPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordActionPerformed
+
+    private void jPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            verifyLogin();
+        }
+    }//GEN-LAST:event_jPasswordKeyPressed
 
     /**
      * @param args the command line arguments

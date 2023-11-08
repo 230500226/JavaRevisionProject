@@ -216,6 +216,10 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JPasswordField" name="jPassword">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPasswordActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jPasswordKeyPressed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -258,6 +262,7 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jLogInButtActionPerformed"/>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jLogInButtKeyPressed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jExitButt">

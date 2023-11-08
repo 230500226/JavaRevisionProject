@@ -191,10 +191,12 @@ public class LoadingPage extends javax.swing.JFrame {
                             else if(i == 100)
                             {
                                 jStatus.setText("You will be redirected to a new page now...");
-                                ((Timer)evt.getSource()).stop(); // stop the timer
-                                //I will add the Menu page
-                                
-                            }
+								((Timer)evt.getSource()).stop(); // stop the timer
+								dispose();
+								Menu menu = new Menu();
+								menu.setVisible(true);
+								
+							}
                             
                         } else {
                             ((Timer)evt.getSource()).stop(); // stop the timer
@@ -203,9 +205,7 @@ public class LoadingPage extends javax.swing.JFrame {
                         i++;
                     }
                 };
-    
                 new Timer(delay, taskPerformer).start();
-                System.out.println("This works?");
     }
 
 

@@ -157,7 +157,7 @@ public class LoadingPage extends javax.swing.JFrame {
 
     public void startLoading(){
 
-                int delay = 1000; //milliseconds
+                int delay = 10; //milliseconds
                 ActionListener taskPerformer = new ActionListener() {
                     int i = 0;
                     public void actionPerformed(ActionEvent evt) {

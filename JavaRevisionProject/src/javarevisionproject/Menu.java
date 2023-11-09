@@ -26,98 +26,57 @@ public class Menu extends javax.swing.JFrame {
         // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
         private void initComponents() {
 
-                pnlMenu = new javax.swing.JPanel();
-                btnCalculator = new javax.swing.JButton();
                 jLabel1 = new javax.swing.JLabel();
-                btnCurrencyConverter = new javax.swing.JButton();
-                btnLogout = new javax.swing.JButton();
-                btnCalendar = new javax.swing.JButton();
-                btnStopWatch = new javax.swing.JButton();
+                jButton1 = new javax.swing.JButton();
+                jButton2 = new javax.swing.JButton();
+                jButton3 = new javax.swing.JButton();
+                jButton4 = new javax.swing.JButton();
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-                pnlMenu.setBackground(new java.awt.Color(102, 102, 102));
-                pnlMenu.setForeground(new java.awt.Color(0, 0, 0));
-
-                btnCalculator.setText("Scientific Calcuator");
-                btnCalculator.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                btnCalculatorActionPerformed(evt);
-                        }
-                });
-
                 jLabel1.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
-                jLabel1.setForeground(new java.awt.Color(255, 255, 255));
                 jLabel1.setText("Welcome, Admin");
 
-                btnCurrencyConverter.setText("Currency Converter");
+                jButton1.setText("Scientific Calculator");
 
-                btnLogout.setText("logout");
+                jButton2.setText("Currency Converter");
 
-                btnCalendar.setText("Calendar");
+                jButton3.setText("Calendar");
 
-                btnStopWatch.setText("Stop Watch");
-
-                javax.swing.GroupLayout pnlMenuLayout = new javax.swing.GroupLayout(pnlMenu);
-                pnlMenu.setLayout(pnlMenuLayout);
-                pnlMenuLayout.setHorizontalGroup(
-                        pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(pnlMenuLayout.createSequentialGroup()
-                                .addGroup(pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(pnlMenuLayout.createSequentialGroup()
-                                                .addContainerGap(130, Short.MAX_VALUE)
-                                                .addGroup(pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addComponent(btnCalculator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(btnCurrencyConverter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(btnCalendar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(btnStopWatch, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(0, 125, Short.MAX_VALUE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMenuLayout.createSequentialGroup()
-                                                .addGap(0, 0, Short.MAX_VALUE)
-                                                .addComponent(btnLogout)))
-                                .addContainerGap())
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMenuLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLabel1)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                );
-                pnlMenuLayout.setVerticalGroup(
-                        pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(pnlMenuLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btnLogout)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnCalculator)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnCurrencyConverter)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnCalendar)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnStopWatch)
-                                .addContainerGap(41, Short.MAX_VALUE))
-                );
+                jButton4.setText("Stop Watch");
 
                 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
                 getContentPane().setLayout(layout);
                 layout.setHorizontalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(pnlMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap(140, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(140, Short.MAX_VALUE))
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(pnlMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap(70, Short.MAX_VALUE)
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton4)
+                                .addContainerGap(70, Short.MAX_VALUE))
                 );
 
                 pack();
         }// </editor-fold>//GEN-END:initComponents
-
-        private void btnCalculatorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculatorActionPerformed
-                dispose();
-                //GradeCalculator calculator = new GradeCalculator();
-                //calculator.setVisible(true);
-        }//GEN-LAST:event_btnCalculatorActionPerformed
 
         /**
          * @param args the command line arguments
@@ -155,12 +114,10 @@ public class Menu extends javax.swing.JFrame {
         }
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
-        private javax.swing.JButton btnCalculator;
-        private javax.swing.JButton btnCalendar;
-        private javax.swing.JButton btnCurrencyConverter;
-        private javax.swing.JButton btnLogout;
-        private javax.swing.JButton btnStopWatch;
+        private javax.swing.JButton jButton1;
+        private javax.swing.JButton jButton2;
+        private javax.swing.JButton jButton3;
+        private javax.swing.JButton jButton4;
         private javax.swing.JLabel jLabel1;
-        private javax.swing.JPanel pnlMenu;
         // End of variables declaration//GEN-END:variables
 }

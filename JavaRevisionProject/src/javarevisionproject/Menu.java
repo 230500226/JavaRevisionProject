@@ -78,8 +78,22 @@ public class Menu extends javax.swing.JFrame {
                                 .addContainerGap(70, Short.MAX_VALUE))
                 );
 
+                btnCalendar.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btnCalendarActionPerformed(evt);
+                        }
+
+                });
+                btnStopWatch.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                btnStopWatchActionPerformed(evt);
+                        }
+
+                });
+
                 pack();
         }// </editor-fold>//GEN-END:initComponents
+
 
         private void btnCalendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordKeyPressed
             dispose();

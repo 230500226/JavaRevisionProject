@@ -246,7 +246,6 @@ public class LogInPage extends javax.swing.JFrame {
     	
     private void verifyLogin() {
         String Password = jPassword.getText();
-        System.out.println(jPassword.getText() + "\n" +jUsername.getText());
         if(jUsername.getText().equals("") || jUsername.getText().equals(" ") || jPassword.getPassword().equals("") || jPassword.getPassword().equals(" ")) {
             JOptionPane.showMessageDialog(null, "One of the fields are empty!","Notification",JOptionPane.ERROR_MESSAGE);
         } else if(jUsername.getText().equals("admin") && Password.equals("admin123")) {

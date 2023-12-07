@@ -4,6 +4,9 @@
  */
 package javarevisionproject;
 
+import Apps.JavaCalendar;
+import Apps.JavaStopWatch;
+
 /**
  *
  * @author ldxt460s
@@ -27,23 +30,23 @@ public class Menu extends javax.swing.JFrame {
         private void initComponents() {
 
                 jLabel1 = new javax.swing.JLabel();
-                jButton1 = new javax.swing.JButton();
-                jButton2 = new javax.swing.JButton();
-                jButton3 = new javax.swing.JButton();
-                jButton4 = new javax.swing.JButton();
+                btnCalculator = new javax.swing.JButton();
+                btnCurrencyConverter = new javax.swing.JButton();
+                btnCalendar = new javax.swing.JButton();
+                btnStopWatch = new javax.swing.JButton();
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
                 jLabel1.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
                 jLabel1.setText("Welcome, Admin");
 
-                jButton1.setText("Scientific Calculator");
+                btnCalculator.setText("Scientific Calculator");
 
-                jButton2.setText("Currency Converter");
+                btnCurrencyConverter.setText("Currency Converter");
 
-                jButton3.setText("Calendar");
+                btnCalendar.setText("Calendar");
 
-                jButton4.setText("Stop Watch");
+                btnStopWatch.setText("Stop Watch");
 
                 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
                 getContentPane().setLayout(layout);
@@ -53,10 +56,10 @@ public class Menu extends javax.swing.JFrame {
                                 .addContainerGap(140, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(btnCalculator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnCurrencyConverter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnCalendar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnStopWatch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addContainerGap(140, Short.MAX_VALUE))
                 );
                 layout.setVerticalGroup(
@@ -65,18 +68,30 @@ public class Menu extends javax.swing.JFrame {
                                 .addContainerGap(70, Short.MAX_VALUE)
                                 .addComponent(jLabel1)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton1)
+                                .addComponent(btnCalculator)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton2)
+                                .addComponent(btnCurrencyConverter)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton3)
+                                .addComponent(btnCalendar)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton4)
+                                .addComponent(btnStopWatch)
                                 .addContainerGap(70, Short.MAX_VALUE))
                 );
 
                 pack();
         }// </editor-fold>//GEN-END:initComponents
+
+        private void btnCalendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordKeyPressed
+            dispose();
+            JavaCalendar javacalendar = new JavaCalendar();
+            javacalendar.setVisible(true);
+        }
+
+        private void btnStopWatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordKeyPressed
+            dispose();
+            JavaStopWatch javastopwatch = new JavaStopWatch();
+            javastopwatch.setVisible(true);
+        }
 
         /**
          * @param args the command line arguments
@@ -114,10 +129,10 @@ public class Menu extends javax.swing.JFrame {
         }
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
-        private javax.swing.JButton jButton1;
-        private javax.swing.JButton jButton2;
-        private javax.swing.JButton jButton3;
-        private javax.swing.JButton jButton4;
+        private javax.swing.JButton btnCalculator;
+        private javax.swing.JButton btnCurrencyConverter;
+        private javax.swing.JButton btnCalendar;
+        private javax.swing.JButton btnStopWatch;
         private javax.swing.JLabel jLabel1;
         // End of variables declaration//GEN-END:variables
 }
